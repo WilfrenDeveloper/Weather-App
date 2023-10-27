@@ -24,8 +24,6 @@ function App() {
     navigator.geolocation.getCurrentPosition(success)
   }, [])
 
-  console.log(coords);
-
   useEffect(() => {
     if (coords) {
       const APIKey = 'd253c4ce42914136aea7b48043b6d308'
@@ -43,6 +41,7 @@ function App() {
     }
   }, [coords])
 
+  console.log(weather);
 
   return (
     <div className='div'>
@@ -52,7 +51,7 @@ function App() {
           : (<CardWeather
             weather={weather}
             temp={temp}
-          />)
+            />)
       }
     </div>
   )
