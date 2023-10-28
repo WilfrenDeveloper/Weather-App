@@ -36,7 +36,7 @@ const InputSearch = ({ setWeather, setIsError}) => {
             <article className='input__article'>
                 <form onSubmit={handleSubmit} className='input__form'>
                     <input type="text" ref={inputSearch} className='input__input' placeholder="Name of City..."/>
-                    <button className='input__btn'><img src="/bx-search-alt-2.svg"></img></button>
+                    <button className='input__btn'><img className="input__icon" src="/bx-search-alt-2.svg"></img></button>
                 </form>
             </article>
 

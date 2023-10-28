@@ -16,7 +16,7 @@ const CardWeather = ({ weather, temp }) => {
             <header className='card__header'>
                 <img src={`https://openweathermap.org/img/wn/${weather?.weather[0].icon}@4x.png`} alt="" className='card__img'/>
             </header>
-            <article className='card__article'>
+            <article className='card__article--description'>
                 <h3 className='card__h3'>"{weather?.weather[0].description}"</h3>
                 <ul className='card__ul'>
                     <li className='card__li'><span className='card__span--label'>Wind Speed</span> <span className='card__span--value'>{weather?.wind.speed}m/s</span></li>
@@ -25,7 +25,7 @@ const CardWeather = ({ weather, temp }) => {
                 </ul>
             </article>
         </section>
-        <h2 className='card__h2'>{isCelsius ? `${temp?.celsius} °C` : `${temp?.fahrenheit} °F`}</h2>
+        <h2 className='card__h2--grade'>{isCelsius ? `${temp?.celsius} °C` : `${temp?.fahrenheit} °F`}</h2>
         <button className='card__btn' onClick={handleChangeTemp}>Change to {isCelsius ? '°F' : '°C'}</button>
     </article>
   )
