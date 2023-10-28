@@ -1,0 +1,26 @@
+@import url('https://fonts.googleapis.com/css2?family=Manjari:wght@400;700&family=Marmelad&display=swap');
+
+:root{
+    --font-light : 'Marmelad', sans-serif;
+    --font-bold :'Manjari', sans-serif;
+
+    --Bold : 900;
+    --regular : 400;
+    --thin : 100;
+}
+
+*,
+*::after,
+*::before{
+    box-sizing: border-box;
+    font-family: var(--font-light);
+    font-weight: var(--Bold);
+}
+
+.body{
+    background-image:url('/atardecer.jpg');
+    background-size:cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}

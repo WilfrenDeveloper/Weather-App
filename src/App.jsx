@@ -1,6 +1,7 @@
-import { useEffect, useState } from 'react'
+import { useEffect, useRef, useState } from 'react'
 import axios from 'axios'
 import CardWeather from './components/CardWeather'
+import InputSearch from './components/InputSearch'
 
 function App() {
 
@@ -9,7 +10,7 @@ function App() {
   const [weather, setWeather] = useState()
   const [temp, setTemp] = useState()
   const [isLoading, setIsLoading] = useState(true)
-
+  const [isError, setIsError] = useState(true)
 
   const success = position => {
     const obj = {
@@ -41,19 +42,27 @@ function App() {
     }
   }, [coords])
 
-  console.log(weather);
 
   return (
-    <div className='div'>
+    <section className='app'>
+      <InputSearch 
+        setWeather={setWeather}
+        setIsError={setIsError}
+      />
       {
         isLoading
-          ? <h2 className='div__h2'>loading...</h2>
-          : (<CardWeather
-            weather={weather}
-            temp={temp}
-            />)
+          ? <h2 className='app__h2'>loading...</h2>
+          : isError
+            ?(<CardWeather
+              weather={weather}
+              temp={temp}
+              />)
+            : <h2 className='app__h2--error'>I'm Sorry, {weather} is not a city ❌</h2>
+          
+          
+  
       }
-    </div>
+    </section>
   )
 }
 

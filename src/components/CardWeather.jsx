@@ -8,25 +8,24 @@ const CardWeather = ({ weather, temp }) => {
     
 
   return (
-    <article className='article'>
-        <h1 className='article__h1'>Weather App</h1>
-        <h2 className='article__h2 h2'>{weather?.name}, {weather?.sys.country}</h2>
-        <section className='article__section'>
-            <header className='article__header'>
-                <img src="" alt="" className='article__img'/>
+    <article className='card__article'>
+        <h1 className='card__h1'>Weather App</h1>
+        <h2 className='card__h2 h2'>{weather?.name}, {weather?.sys.country}</h2>
+        <section className='card__section'>
+            <header className='card__header'>
+                <img src={`https://openweathermap.org/img/wn/${weather?.weather[0].icon}@4x.png`} alt="" className='card__img'/>
             </header>
-            <article className='article__article'>
-                <h3 className='article
-                __h3'>"{weather?.weather[0].description}"</h3>
-                <ul>
-                    <li><span>Wind Speed</span> <span>{weather?.wind.speed}m/s</span></li>
-                    <li><span>Clouds</span> <span>{weather?.clouds.all}%</span></li>
-                    <li><span>Pressure</span> <span>{weather?.main.pressure}hPa</span></li>
+            <article className='card__article'>
+                <h3 className='card__h3'>"{weather?.weather[0].description}"</h3>
+                <ul className='card__ul'>
+                    <li className='card__li'><span className='card__span--label'>Wind Speed</span> <span className='card__span--value'>{weather?.wind.speed}m/s</span></li>
+                    <li className='card__li'><span className='card__span--label'>Clouds</span> <span className='card__span--value'>{weather?.clouds.all}%</span></li>
+                    <li className='card__li'><span className='card__span--label'>Pressure</span> <span className='card__span--value'>{weather?.main.pressure}hPa</span></li>
                 </ul>
             </article>
         </section>
-        <h2>{isCelsius ? `${temp?.celsius} °C` : `${temp?.fahrenheit} °F`}</h2>
-        <button onClick={handleChangeTemp}>Change to {isCelsius ? '°F' : '°C'}</button>
+        <h2 className='card__h2'>{isCelsius ? `${temp?.celsius} °C` : `${temp?.fahrenheit} °F`}</h2>
+        <button className='card__btn' onClick={handleChangeTemp}>Change to {isCelsius ? '°F' : '°C'}</button>
     </article>
   )
 }
