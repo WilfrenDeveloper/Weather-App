@@ -1,5 +1,6 @@
 import axios from 'axios'
 import React, { useEffect, useRef, useState } from 'react'
+import "../assets/style/InputSearch.css"
 
 
 const InputSearch = ({ setWeather, setIsError}) => {
@@ -34,7 +35,7 @@ const InputSearch = ({ setWeather, setIsError}) => {
         <>
             <article className='input__article'>
                 <form onSubmit={handleSubmit} className='input__form'>
-                    <input type="text" ref={inputSearch} className='input__input' placeholder="Name of your city..."/>
+                    <input type="text" ref={inputSearch} className='input__input' placeholder="Name of City..."/>
                     <button className='input__btn'><img src="/bx-search-alt-2.svg"></img></button>
                 </form>
             </article>

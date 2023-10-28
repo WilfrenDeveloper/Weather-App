@@ -2,6 +2,7 @@ import { useEffect, useRef, useState } from 'react'
 import axios from 'axios'
 import CardWeather from './components/CardWeather'
 import InputSearch from './components/InputSearch'
+import "./assets/style/App.css"
 
 function App() {
 
@@ -57,10 +58,7 @@ function App() {
               weather={weather}
               temp={temp}
               />)
-            : <h2 className='app__h2--error'>I'm Sorry, {weather} is not a city ❌</h2>
-          
-          
-  
+            : <h2 className='app__h2'>I'm Sorry, {weather} is not a city ❌</h2>
       }
     </section>
   )

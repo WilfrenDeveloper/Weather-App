@@ -1,0 +1,16 @@
+.input__form{
+    display: flex;
+    background-color: #fff;
+    border-radius: 10px;
+    
+}
+
+.input__input,
+.input__btn{
+    background-color: #ffffff00;
+    height: 40px;
+    padding: 5px;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}

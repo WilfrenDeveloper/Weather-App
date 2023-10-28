@@ -7,14 +7,22 @@
     --Bold : 900;
     --regular : 400;
     --thin : 100;
+
+    
+    font-family: var(--font-bold);
+    font-weight: var(--Bold);
 }
 
 *,
 *::after,
 *::before{
     box-sizing: border-box;
-    font-family: var(--font-light);
-    font-weight: var(--Bold);
+    font-family: inherit;
+    font-weight: inherit;
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+    border-style: none;
 }
 
 .body{

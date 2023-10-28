@@ -1,4 +1,5 @@
 import React, { useState } from 'react'
+import "../assets/style/CardWeather.css"
 
 const CardWeather = ({ weather, temp }) => {
 
